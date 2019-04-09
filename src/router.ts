@@ -1,15 +1,23 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import LatestMovie from './components/LatestMovie.vue';
+import Movie from './components/Movie.vue';
 
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'LatestMovie',
+      component: LatestMovie
+    },
+    {
+      path: '/movie/:id',
+      name: 'Movie',
+      props: true,
+      component: Movie
     },
     {
       path: '/about',

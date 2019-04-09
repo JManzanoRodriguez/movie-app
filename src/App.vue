@@ -16,18 +16,18 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import LatestMovie from './components/LatestMovie'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LatestMovie
   },
   data () {
     return {
